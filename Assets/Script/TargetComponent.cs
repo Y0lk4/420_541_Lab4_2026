@@ -22,17 +22,12 @@ public class TargetComponent : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    private void OllisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         //gets the object that collides with the target
         //and then checks if its a projectile by looking at its tag.
-        if (collision.gameObject.CompareTag("Projectile"))
+        if (collision.gameObject.CompareTag("projectile"))
         {
             //gets the score from the game manager and increments it
             //using its IncrementScore() method 
